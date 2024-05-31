@@ -47,4 +47,13 @@ module.exports = {
         //     process.platform === 'win32' ? 'windows' : 'unix',
         // ],
     },
+    // 覆盖这个文件下vue文件名需要驼峰命名的规则
+    overrides: [
+        {
+            files: ['src/views/**/*.vue'],
+            rules: {
+                'vue/multi-word-component-names': 0,
+            },
+        },
+    ],
 };

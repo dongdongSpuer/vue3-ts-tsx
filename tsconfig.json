@@ -26,19 +26,16 @@
             "@/*": ["src/*"],
             "@build/*": ["build/*"]
         },
-
-        "typeRoots": [
-            "./types",
-            "node_modules/@types", // 默认值
-            "src/types"
-        ]
+        "types": ["node", "vite/client"]
     },
     "include": [
+        "src/**/*.vue",
         "src/**/*.ts",
         "src/**/*.tsx",
-        "src/**/*.vue",
         "build/**/*.ts",
-        "types/*.d.ts"
+        "types/*.d.ts",
+        "vite-env.d.ts",
+        "vite.config.ts"
     ],
     "exclude": ["dist", "**/*.js", "node_modules"],
     "references": [{ "path": "./tsconfig.node.json" }]
